@@ -1,0 +1,17 @@
+{% extends "index.html" %}
+{% block content %}
+<p>Test</p>
+<script>
+    let a = document.querySelectorAll(".sidebar")
+    a.forEach(b=>{
+        if(b.href === window.location.href){
+            b.classList.add("text-white")
+            b.classList.add("bg-[#7163BA]")
+        }else{
+            b.classList.remove("text-white")
+            b.classList.remove("bg-[#7163BA]")
+        }
+        console.log(b.href)
+    })
+</script>
+{% endblock %}
